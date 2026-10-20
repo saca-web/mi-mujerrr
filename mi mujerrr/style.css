@@ -1,0 +1,373 @@
+/* Configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #ffeef8 0%, #ffd6e8 50%, #fff0f5 100%);
+  color: #4a3b4e;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Encabezado */
+.hero {
+  margin: 25px 0 10px;
+}
+
+.hero h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.8rem;
+  color: #d81b60;
+  margin-bottom: 8px;
+}
+
+.hero .subtitle {
+  font-size: 0.95rem;
+  color: #7a5265;
+  padding: 0 10px;
+}
+
+.heart-icon {
+  font-size: 3rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* HELLO KITTY EN CSS */
+.kitty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto 15px;
+}
+
+.kitty {
+  position: relative;
+  width: 140px;
+  height: 160px;
+}
+
+.kitty .head {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 120px;
+  height: 90px;
+  background: #ffffff;
+  border: 3px solid #222;
+  border-radius: 50% / 55% 55% 45% 45%;
+  z-index: 5;
+}
+
+.kitty .ear {
+  position: absolute;
+  top: 5px;
+  width: 38px;
+  height: 40px;
+  background: #ffffff;
+  border: 3px solid #222;
+  z-index: 2;
+}
+
+.kitty .ear.left {
+  left: 12px;
+  border-radius: 80% 20% 0 0;
+  transform: rotate(-15deg);
+}
+
+.kitty .ear.right {
+  right: 12px;
+  border-radius: 20% 80% 0 0;
+  transform: rotate(15deg);
+}
+
+.kitty .bow {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  z-index: 10;
+}
+
+.kitty .bow-center {
+  width: 16px;
+  height: 16px;
+  background: #ff1744;
+  border: 2px solid #222;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.kitty .bow-left, .kitty .bow-right {
+  width: 22px;
+  height: 20px;
+  background: #ff1744;
+  border: 2px solid #222;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+}
+
+.kitty .bow-left {
+  left: -16px;
+  transform: rotate(-15deg);
+}
+
+.kitty .bow-right {
+  left: 10px;
+  transform: rotate(15deg);
+}
+
+.kitty .eye {
+  position: absolute;
+  top: 42px;
+  width: 10px;
+  height: 14px;
+  background: #222;
+  border-radius: 50%;
+}
+
+.kitty .eye.left { left: 32px; }
+.kitty .eye.right { right: 32px; }
+
+.kitty .nose {
+  position: absolute;
+  top: 50px;
+  left: 54px;
+  width: 12px;
+  height: 8px;
+  background: #ffea00;
+  border: 2px solid #222;
+  border-radius: 50%;
+}
+
+.kitty .whiskers {
+  position: absolute;
+  top: 42px;
+  width: 25px;
+}
+
+.kitty .whiskers span {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.kitty .whiskers.left {
+  left: 2px;
+  transform: rotate(5deg);
+}
+
+.kitty .whiskers.right {
+  right: 2px;
+  transform: rotate(-5deg);
+}
+
+.kitty .body {
+  position: absolute;
+  top: 95px;
+  left: 35px;
+  width: 70px;
+  height: 55px;
+  z-index: 3;
+}
+
+.kitty .dress {
+  width: 100%;
+  height: 100%;
+  background: #ff69b4;
+  border: 3px solid #222;
+  border-radius: 20px 20px 10px 10px;
+}
+
+.kitty .arm {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border: 3px solid #222;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.kitty .arm.left-arm {
+  top: 10px;
+  left: -12px;
+}
+
+.kitty .arm.right-arm {
+  top: 10px;
+  right: -12px;
+}
+
+.kitty .heart-held {
+  position: absolute;
+  top: -2px;
+  left: -28px;
+  font-size: 1.8rem;
+  z-index: 7;
+  animation: beat 1.2s infinite alternate;
+}
+
+.kitty .roses-held {
+  position: absolute;
+  top: -5px;
+  right: -32px;
+  font-size: 1.8rem;
+  z-index: 7;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+.kitty-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d81b60;
+  margin-top: 10px;
+}
+
+/* Frase destacada */
+.quote-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(216, 27, 96, 0.1);
+  border-left: 5px solid #ff4081;
+}
+
+.quote-box p {
+  font-style: italic;
+  font-weight: 600;
+  color: #c2185b;
+  font-size: 1.05rem;
+}
+
+/* Galería vertical */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 420px;
+  margin: 30px auto;
+}
+
+.photo-card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ffe0ec;
+}
+
+/* Marco para las fotos (Ajustado para que se adapten perfecto sin deformarse) */
+.photo-frame {
+  width: 100%;
+  height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: #fce4ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+}
+
+.photo-card h2 {
+  font-size: 1.3rem;
+  color: #ad1457;
+  margin-bottom: 8px;
+}
+
+.photo-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #5d4037;
+}
+
+/* Carta de amor */
+.love-letter {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(216, 27, 96, 0.12);
+  text-align: left;
+}
+
+.love-letter h2 {
+  color: #d81b60;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.love-letter p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #4e342e;
+}
+
+/* Botón interactivo */
+.interactive-section {
+  margin: 30px 0;
+}
+
+#loveBtn {
+  background: linear-gradient(135deg, #ff4081, #d81b60);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(216, 27, 96, 0.35);
+  cursor: pointer;
+  width: 90%;
+  max-width: 350px;
+  transition: transform 0.2s ease;
+}
+
+#loveBtn:active {
+  transform: scale(0.95);
+}
+
+.hidden-message {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c2185b;
+}
+
+footer {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: #a37288;
+}
